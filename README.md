@@ -8,7 +8,7 @@ Se han realizado varios ejercicios de script en unity:
 ![ejercicio_1](gifs/ejercicio_1.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejerccicio_1).
+1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio_1).
    
 Dentro del script:
 1. Declaración de una variable pública de tipo float (speed) con un valor predeterminado de 2f.
@@ -20,3 +20,17 @@ Dentro del script:
 7. Muestra de mensajes por consola indicando el nombre de la flecha presionada ("left" o "right") y la velocidad en el eje X cuando se presionan las teclas de flecha hacia la izquierda o hacia la derecha.
 
 <br><br>
+
+- **b) Mapear la tecla H a la función disparo.**
+
+![ejercicio_2](gifs/ejercicio_2.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Abrir **Input Manager** (Edit > Project Settings > Input Manager).
+2. Configuración del botón de disparo "Fire1".
+3. Cambio "Positive Button" a la tecla H.
+4. Creación de un [script](scripts/ejercicio2_script.cs) (check Fire Key) asociado a un objeto vacío (fire) para comprobar su correcto funcionamiento.
+
+Dentro del script:
+1. Comprobación de si la tecla "Fire1" está siendo presionada usando **Input.GetButtonDown("Fire1")**.
+2. Muestra de un mensaje por consola ("Disparo!") cuando la tecla "Fire1" es presionada.
