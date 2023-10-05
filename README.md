@@ -28,7 +28,7 @@ Dentro del script:
 Para ello se han seguido los siguientes pasos:
 1. Abrir **Input Manager** (Edit > Project Settings > Input Manager).
 2. Configuración del botón de disparo "Fire1".
-3. Cambio "Positive Button" a la tecla H.
+3. Cambio del ajuste "Positive Button" a la tecla H.
 4. Creación de un [script](scripts/ejercicio2_script.cs) (check Fire Key) asociado a un objeto vacío (fire) para comprobar su correcto funcionamiento.
 
 Dentro del script:
