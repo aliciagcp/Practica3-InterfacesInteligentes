@@ -56,9 +56,9 @@ Dentro del script:
 4. Uso de **transform.Translate(displacement)** para mover el objeto al que está adjunto el script en la dirección especificada por **moveDirection** con la velocidad especificada por **speed** y ajustado por el tiempo del fotograma usando **Time.deltaTime**.
 
 Resultados obtenidos:
-+ **Duplicas las coordenadas de la dirección del movimiento.**: Si duplicas las coordenadas de *moveDirection*, el cubo se moverá en una dirección diferente y a una velocidad diferente.
-+ **Duplicas la velocidad manteniendo la dirección del movimiento.**: Si duplicas la propiedad *speed*, el cubo se moverá más rápido en la misma dirección especificada por moveDirection.
++ **Duplicas las coordenadas de la dirección del movimiento**: Si duplicas las coordenadas de *moveDirection*, el cubo se moverá en una dirección diferente y a una velocidad diferente.
++ **Duplicas la velocidad manteniendo la dirección del movimiento**: Si duplicas la propiedad *speed*, el cubo se moverá más rápido en la misma dirección especificada por moveDirection.
 + **La velocidad que usas es menor que 1**: Si la velocidad es menor que 1, el cubo se moverá más lentamente.
 + **La posición del cubo tiene y>0**: Si cambias la posición del cubo en el eje Y a un valor mayor que 0, el cubo se moverá en esa dirección además de la dirección especificada por moveDirection.
-+ **Intercambiar movimiento relativo al sistema de referencia local y el mundial.**: Para cambiar entre el sistema de referencia local y mundial, puedes usar transform.Translate(displacement) para mover el cubo en relación con su propio sistema de coordenadas local, o transform.Translate(displacement, Space.World) para moverlo en relación con el sistema de coordenadas mundial.
++ **Intercambiar movimiento relativo al sistema de referencia local y el mundial**: Para cambiar entre el sistema de referencia local y mundial, puedes usar transform.Translate(displacement) para mover el cubo en relación con su propio sistema de coordenadas local, o transform.Translate(displacement, Space.World) para moverlo en relación con el sistema de coordenadas mundial.
 
