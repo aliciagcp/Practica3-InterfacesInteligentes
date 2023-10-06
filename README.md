@@ -53,13 +53,14 @@ Para ello se han seguido los siguientes pasos:
 Dentro del script:
 1. Declaración de una variable pública (moveDirection) de tipo Vector3 con un valor inicial de (1f, 0f, 0f).
 2. Declaración de una variable pública (speed) de tipo float con un valor inicial de 2f.
+3. Declaración de una variable pública (referenceSpace) de tipo Space con un valor inicial de **Space.Self**.
 3. Multiplicación de **moveDirection** por **speed** y por **Time.deltaTime** para calcular el desplazamiento en el marco de tiempo actual.
-4. Uso de **transform.Translate(displacement)** para mover el objeto al que está adjunto el script en la dirección especificada por **moveDirection** con la velocidad especificada por **speed** y ajustado por el tiempo del fotograma usando **Time.deltaTime**.
+4. Uso de **transform.Translate(displacement)** para mover el objeto al que está adjunto el script en la dirección especificada por **moveDirection** con la velocidad especificada por **speed** y ajustado por el tiempo del fotograma usando **Time.deltaTime**, considerando el espacio de referencia especificado por referenceSpace (que puede ser Space.Self o Space.World).
 
 Resultados obtenidos:
 + **Duplicas las coordenadas de la dirección del movimiento**: Si duplicas las coordenadas de *moveDirection*, el cubo se moverá en una dirección diferente. [gif](gifs/ejercicio3_1.gif)
 + **Duplicas la velocidad manteniendo la dirección del movimiento**: Si duplicas la propiedad *speed*, el cubo se moverá más rápido en la misma dirección especificada por moveDirection. [gif](gifs/ejercicio3_2.gif)
 + **La velocidad que usas es menor que 1**: Si la velocidad es menor que 1, el cubo se moverá más lentamente. [gif](gifs/ejercicio3_3.gif)
 + **La posición del cubo tiene y>0**: Si cambias la posición del cubo en el eje Y a un valor mayor que 0, el cubo se moverá en esa dirección además de la dirección especificada por moveDirection. [gif](gifs/ejercicio3_4.gif)
-+ **Intercambiar movimiento relativo al sistema de referencia local y el mundial**: Para cambiar entre el sistema de referencia local y mundial, puedes usar transform.Translate(displacement) para mover el cubo en relación con su propio sistema de coordenadas local, o transform.Translate(displacement, Space.World) para moverlo en relación con el sistema de coordenadas mundial. [gif](gifs/ejercicio3_5.gif)
++ **Intercambiar movimiento relativo al sistema de referencia local y el mundial**: Al usar *Space.Self* el objeto se moverá en la dirección especificada (moveDirection) relativa a su propia orientación, ignorando la orientación global del mundo. Sin embargo, al usar *Space.World* el objeto se moverá en función de la orientación global del mundo, ignorando su propia orientación local. [gif](gifs/ejercicio3_5.gif)
 
