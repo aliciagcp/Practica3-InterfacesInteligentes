@@ -83,9 +83,9 @@ Dentro del script:
 1. Declaración de variables públicas (sphere y cube) de tipo GameObject para referenciar los objetos de esfera y cubo respectivamente.
 2. Declaración de una variable pública (speed) de tipo float con un valor inicial de 0.25f para determinar la velocidad del movimiento.
 3. Obtención del input vertical (moveVerticalCube) y horizontal (moveHorizontalCube) para el objeto **cube** usando los ejes "VerticalCube" y "HorizontalCube".
-4. Creación de un vector de movimiento (movementCube) para el cubo utilizando los valores de **input vertical** y **horizontal** multiplicados por **speed** (new Vector3(moveHorizontalCube, moveVerticalCube, 0f) * speed).
+4. Creación de un vector de movimiento (movementCube) para el cubo utilizando los valores de **input vertical** y **horizontal** multiplicados por **speed**. (new Vector3(moveHorizontalCube, moveVerticalCube, 0f) * speed)
 5. Movimiento del objeto **cube** usando **cube.transform.Translate(movementCube)** para aplicar la translación según el vector de movimiento calculado.
 6. Obtención del input vertical (moveVerticalSphere) y horizontal (moveHorizontalSphere) para el objeto **sphere** usando los ejes "VerticalSphere" y "HorizontalSphere".
-7. Creación de un vector de movimiento (movementSphere) para la sphere utilizando los valores de **input vertical** y **horizontal** multiplicados por **speed** (new Vector3(moveHorizontalSphere, moveVerticalSphere, 0f) * speed).
+7. Creación de un vector de movimiento (movementSphere) para la sphere utilizando los valores de **input vertical** y **horizontal** multiplicados por **speed**. (new Vector3(moveHorizontalSphere, moveVerticalSphere, 0f) * speed)
 8. Movimiento del objeto **sphere** usando **sphere.transform.Translate(movementSphere)** para aplicar la translación según el vector de movimiento calculado.
 
