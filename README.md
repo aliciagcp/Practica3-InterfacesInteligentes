@@ -38,18 +38,27 @@ Dentro del script:
 <br><br>
 
 - **c) Se pide crear un script asociado al cubo que en cada iteración traslade al cubo una cantidad proporcional un vector que indica la dirección del movimiento: moveDirection que debe poder modificarse en el inspector. La velocidad a la que se produce el movimiento también se especifica en el inspector, con la propiedad speed. Inicialmente la velocidad debe ser mayor que 1 y el cubo estar en una posición y=0. En el informe de la práctica comenta los resultados que obtienes en cada una de las siguientes situaciones:**
-   + **duplicas las coordenadas de la dirección del movimiento.**
-   + **duplicas la velocidad manteniendo la dirección del movimiento.**
-   + **la velocidad que usas es menor que 1**
-   + **la posición del cubo tiene y>0**
-   + **intercambiar movimiento relativo al sistema de referencia local y el mundial.**
-
+   + **Duplicas las coordenadas de la dirección del movimiento.**
+   + **Duplicas la velocidad manteniendo la dirección del movimiento.**
+   + **La velocidad que usas es menor que 1**
+   + **La posición del cubo tiene y>0**
+   + **Intercambiar movimiento relativo al sistema de referencia local y el mundial.**
+     
 ![ejercicio_3](gifs/ejercicio_3.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Abrir **Input Manager** (Edit > Project Settings > Input Manager).
-2. Configuración del botón de disparo "Fire1".
-3. Cambio del ajuste "Positive Button" a la tecla H.
-4. Creación de un [script](scripts/ejercicio3_script.cs) (check Fire Key) asociado a un objeto vacío (fire) para comprobar su correcto funcionamiento.
+1. Creación de un [script](scripts/ejercicio3_script.cs) (Ejercicio3_3) asociado al cubo.
 
 Dentro del script:
+1. Declaración de una variable pública (moveDirection) de tipo Vector3 con un valor inicial de (1f, 0f, 0f).
+2. Declaración de una variable pública (speed) de tipo float con un valor inicial de 2f.
+3. Multiplicación de **moveDirection** por **speed** y por **Time.deltaTime** para calcular el desplazamiento en el marco de tiempo actual.
+4. Uso de **transform.Translate(displacement)** para mover el objeto al que está adjunto el script en la dirección especificada por **moveDirection** con la velocidad especificada por **speed** y ajustado por el tiempo del fotograma usando **Time.deltaTime**.
+
+Resultados obtenidos:
++ **Duplicas las coordenadas de la dirección del movimiento.**: Si duplicas las coordenadas de *moveDirection*, el cubo se moverá en una dirección diferente y a una velocidad diferente.
++ **Duplicas la velocidad manteniendo la dirección del movimiento.**: Si duplicas la propiedad *speed*, el cubo se moverá más rápido en la misma dirección especificada por moveDirection.
++ **La velocidad que usas es menor que 1**: Si la velocidad es menor que 1, el cubo se moverá más lentamente.
++ **La posición del cubo tiene y>0**: Si cambias la posición del cubo en el eje Y a un valor mayor que 0, el cubo se moverá en esa dirección además de la dirección especificada por moveDirection.
++ **Intercambiar movimiento relativo al sistema de referencia local y el mundial.**: Para cambiar entre el sistema de referencia local y mundial, puedes usar transform.Translate(displacement) para mover el cubo en relación con su propio sistema de coordenadas local, o transform.Translate(displacement, Space.World) para moverlo en relación con el sistema de coordenadas mundial.
+
