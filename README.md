@@ -71,11 +71,11 @@ Resultados obtenidos:
 Para ello se han seguido los siguientes pasos:
 1. Creación de un [script](scripts/ejercicio4_script.cs) asociado a un objeto vacío (moveUsingKeys).
 2. Abrir **Input Manager** (Edit > Project Settings > Input Manager).
-2. Creación y configuración de los botones "VerticalCube" y "HorizontalCube".
-3. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("up", "down", "left" y "right") según corresponda.
-4. Creación y configuración de los botones "VerticalSphere" y "HorizontalSphere".
-3. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("w", "s", "a" y "w") según corresponda.
-3. Asignación de los objetos "Cube" y "Sphere" en el inspector del objeto que contiene dicho script.
+3. Creación y configuración de los botones "VerticalCube" y "HorizontalCube".
+4. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("up", "down", "left" y "right") según corresponda.
+5. Creación y configuración de los botones "VerticalSphere" y "HorizontalSphere".
+6. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("w", "s", "a" y "w") según corresponda.
+7. Asignación de los objetos "Cube" y "Sphere" en el inspector del objeto que contiene dicho script.
 
 Dentro del script:
 1. Declaración de variables públicas (sphere y cube) de tipo GameObject para referenciar los objetos de esfera y cubo respectivamente.
@@ -87,3 +87,14 @@ Dentro del script:
 7. Creación de un vector de movimiento (movementSphere) para la sphere utilizando los valores de **input vertical** y **horizontal** multiplicados por **speed**. (new Vector3(moveHorizontalSphere, moveVerticalSphere, 0f) * speed)
 8. Movimiento del objeto **sphere** usando **sphere.transform.Translate(movementSphere)** para aplicar la translación según el vector de movimiento calculado.
 
+<br><br>
+
+- **e) Se pide adaptar el movimiento en el ejercicio 4 para que sea proporcional al tiempo transcurrido durante la generación del frame.**
+     
+![ejercicio_5](gifs/ejercicio_5.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Edición del anterior [script](scripts/ejercicio5_script.cs) (moveUsingKeys).
+
+Dentro del script:
+1. Multiplicación del vector de movimiento por **Time.deltaTime**. (new Vector3(moveHorizontalCube, moveVerticalCube, 0f) * speed * Time.deltaTime;) y (new Vector3(moveHorizontalSphere, moveVerticalSphere, 0f) * speed * Time.deltaTime)
