@@ -8,7 +8,7 @@ Se han realizado varios ejercicios de script en unity:
 ![ejercicio_1](gifs/ejercicio_1.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio_1).
+1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio3_1).
    
 Dentro del script:
 1. Declaración de una variable pública de tipo float (speed) con un valor predeterminado de 2f.
@@ -63,4 +63,16 @@ Resultados obtenidos:
 + **La velocidad que usas es menor que 1**: Si la velocidad es menor que 1, el cubo se moverá más lentamente. [gif](gifs/ejercicio3_3.gif)
 + **La posición del cubo tiene y>0**: Si cambias la posición del cubo en el eje Y a un valor mayor que 0, el cubo se moverá en esa dirección además de la dirección especificada por moveDirection. [gif](gifs/ejercicio3_4.gif)
 + **Intercambiar movimiento relativo al sistema de referencia local y el mundial**: Al usar *Space.Self* el objeto se moverá en la dirección especificada (moveDirection) relativa a su propia orientación, ignorando la orientación global del mundo. Sin embargo, al usar *Space.World* el objeto se moverá en función de la orientación global del mundo, ignorando su propia orientación local. [gif](gifs/ejercicio3_5.gif)
+
+<br><br>
+
+- **d) Se pide mover el cubo con las teclas de flecha arriba-abajo, izquierda-derecha a la velocidad speed. Cada uno de estos ejes implican desplazamientos en el eje vertical y horizontal respectivamente. Mover la esfera con las teclas w-s (movimiento vertical) a-d (movimiento horizontal).**
+     
+![ejercicio_4](gifs/ejercicio_4.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Creación de un [script](scripts/ejercicio4_script.cs) asociado a un objeto vacío (moveUsingKeys).
+
+Dentro del script:
+
 
