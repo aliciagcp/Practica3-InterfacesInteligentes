@@ -11,13 +11,11 @@ Para ello se han seguido los siguientes pasos:
 1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio3_1).
    
 Dentro del script:
-1. Declaración de una variable pública de tipo float (speed) con un valor predeterminado de 2f.
-2. Verificación de las teclas de flecha hacia arriba y hacia abajo usando **Input.GetKeyDown(KeyCode.UpArrow)** e **Input.GetKeyDown(KeyCode.DownArrow)**.
-3. Obtención de la entrada vertical del eje usando **Input.GetAxis("Vertical")** y creación de un vector de movimiento en el eje X con la velocidad multiplicada por la entrada vertical (new Vector3(verticalInput * speed, 0, 0)).
-4. Muestra de mensajes por consola indicando el nombre de la flecha presionada ("up" o "down") y la velocidad en el eje X cuando se presionan las teclas de flecha hacia arriba o hacia abajo.
-5. Verificación de las teclas de flecha izquierda y derecha usando **Input.GetKeyDown(KeyCode.LeftArrow)** e **Input.GetKeyDown(KeyCode.RightArrow)**.
-6. Obtención de la entrada horizontal del eje usando **Input.GetAxis("Horizontal")** y creación de un vector de movimiento en el eje X con la velocidad multiplicada por la entrada horizontal (new Vector3(horizontalInput * speed, 0, 0)).
-7. Muestra de mensajes por consola indicando el nombre de la flecha presionada ("left" o "right") y la velocidad en el eje X cuando se presionan las teclas de flecha hacia la izquierda o hacia la derecha.
+1. Declaración de una variable pública (speed) de tipo float con un valor inicial de 2f para determinar la velocidad del movimiento.
+2. Obtención de la entrada horizontal (movementHorizontal) y vertical (movementVertical) del usuario usando **Input.GetAxis("Horizontal")** y **Input.GetAxis("Vertical")** respectivamente.
+3. Verificación de si se presionan las teclas de flecha hacia arriba, abajo, izquierda o derecha usando **Input.GetKeyDown(KeyCode.UpArrow)**, **Input.GetKeyDown(KeyCode.DownArrow)**, **Input.GetKeyDown(KeyCode.LeftArrow)**, **Input.GetKeyDown(KeyCode.RightArrow)** respectivamente.
+4. Si alguna de las teclas de flecha es presionada, se verifica cuál de ellas fue presionada utilizando **Input.GetKey(KeyCode.UpArrow)**, **Input.GetKey(KeyCode.DownArrow)**, **Input.GetKey(KeyCode.LeftArrow)**, **Input.GetKey(KeyCode.RightArrow)**.
+5. Muestra de un mensaje por consola indicando la dirección correspondiente ("Flecha arriba", "Flecha abajo", "Flecha izquierda" o "Flecha derecha") junto con la velocidad del movimiento en esa dirección, que es calculada multiplicando la entrada horizontal o vertical por **speed**.
 
 <br><br>
 
