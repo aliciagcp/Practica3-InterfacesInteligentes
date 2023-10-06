@@ -47,7 +47,7 @@ Dentro del script:
 ![ejercicio_3](gifs/ejercicio_3.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Creación de un [script](scripts/ejercicio3_script.cs) (Ejercicio3_3) asociado al cubo.
+1. Creación de un [script](scripts/ejercicio3_script.cs) asociado al cubo (Ejercicio3_3).
 
 Dentro del script:
 1. Declaración de una variable pública (moveDirection) de tipo Vector3 con un valor inicial de (1f, 0f, 0f).
