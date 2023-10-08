@@ -124,5 +124,8 @@ Para ello se han seguido los siguientes pasos:
 1. Edición del anterior [script](scripts/ejercicio7_script.cs) (moveUsingKeys).
 
 Cambios dentro del script:
-1. Multiplicación del vector de movimiento por **Time.deltaTime**. (new Vector3(moveHorizontalCube, 0f, moveVerticalCube) * speed * Time.deltaTime;) y (new Vector3(moveHorizontalSphere, 0f, moveVerticalSphere) * speed * Time.deltaTime)
+1. Cálculo de la dirección hacia la esfera (directionToSphere) restando la posición de la esfera de la posición del cubo. (Vector3 directionToSphere = sphere.transform.position - cube.transform.position;).
+2. Orientación del cubo hacia la esfera utilizando **cube.transform.LookAt(sphere.transform, Vector3.up);**. Esto hace que el cubo mire hacia la posición de la esfera mientras mantiene su orientación vertical utilizando **Vector3.up** como el eje hacia arriba.
+3. Cálculo del vector de movimiento (movement) para el cubo multiplicando el vector de avance (cube.transform.forward) por **speed** y por **Time.deltaTime**. (Vector3 movement = cube.transform.forward * speed * Time.deltaTime;).
+4. Movimiento del objeto cube en la dirección hacia la esfera utilizando **cube.transform.Translate(movement, Space.World);**, donde **Space.World** indica que el movimiento se realiza en el espacio mundial, independientemente de la rotación del objeto.
 
