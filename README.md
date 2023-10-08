@@ -103,7 +103,7 @@ Cambios dentro del script:
 
 - **f) Se pide adaptar el movimiento en el ejercicio 5 para que el cubo se mueva hacia la posición de la esfera. Debes considerar, que el avance no debe estar influenciado por cuánto de lejos o cerca estén los dos objetos.**
      
-![ejercicio_5](gifs/ejercicio_5.gif)
+![ejercicio_6](gifs/ejercicio_6.gif)
 
 Para ello se han seguido los siguientes pasos:
 1. Edición del anterior [script](scripts/ejercicio6_script.cs) (moveUsingKeys).
