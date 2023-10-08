@@ -144,3 +144,18 @@ Dentro del script:
 3. Cálculo del cambio de rotación en el eje Y (rotationY) multiplicando la entrada horizontal por **Time.deltaTime** y por un factor de **100f** para suavizar el movimiento. (float rotationY = horizontalInput * Time.deltaTime * 100f;).
 4. Rotación del objeto en el eje Y usando **transform.Rotate(0f, rotationY, 0f);** para aplicar el cambio de rotación calculado.
 5. Movimiento del objeto hacia adelante (transform.forward) multiplicado por **speed** y por **Time.deltaTime** para calcular el desplazamiento en el marco de tiempo actual (transform.position += transform.forward * speed * Time.deltaTime;). Este desplazamiento se suma a la posición actual del objeto, moviéndolo hacia adelante en la dirección en la que está orientado.
+
+<br><br>
+
+- **i) Se pide configura el cilindro como un objeto físico, cuando el cubo o la esfera colisionen con él se debe mostrar un mensaje en consola con la etiqueta del objeto que haya colisionado.**
+     
+![ejercicio_9](gifs/ejercicio_9.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Creación de un [script](scripts/ejercicio9_script.cs) asociado al cilindro (Ejercicio9_3).
+
+Dentro del script:
+1. Implementación del método **OnCollisionEnter(Collision collision)** que se ejecuta cuando el objeto que tiene este script adjunto colisiona con otro objeto en el juego.
+2. Verificación de si el objeto con el que se ha producido la colisión tiene una etiqueta asignada usando **collision.gameObject.tag**.
+3. Si el objeto tiene una etiqueta asignada, se imprime un mensaje de depuración indicando "Colisión con objeto etiquetado: " seguido del nombre de la etiqueta del objeto con el que se ha producido la colisión: Debug.Log("Colisión con objeto etiquetado: " + collision.gameObject.tag);.
+4. Si el objeto no tiene una etiqueta asignada (si la etiqueta es null), se imprime un mensaje de depuración indicando "Colisión con objeto sin etiqueta": Debug.Log("Colisión con objeto sin etiqueta");.
