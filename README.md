@@ -153,6 +153,7 @@ Dentro del script:
 
 Para ello se han seguido los siguientes pasos:
 1. Creación de un [script](scripts/ejercicio9_script.cs) asociado al cilindro (Ejercicio9_3).
+2. Agregación del componente **Rigidbody** en el objeto cylinder.
 
 Dentro del script:
 1. Implementación del método **OnCollisionEnter(Collision collision)** que se ejecuta cuando el objeto que tiene este script adjunto colisiona con otro objeto en el juego.
