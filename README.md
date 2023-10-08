@@ -96,5 +96,20 @@ Dentro del script:
 Para ello se han seguido los siguientes pasos:
 1. Edición del anterior [script](scripts/ejercicio5_script.cs) (moveUsingKeys).
 
-Dentro del script:
+Cambios dentro del script:
 1. Multiplicación del vector de movimiento por **Time.deltaTime**. (new Vector3(moveHorizontalCube, 0f, moveVerticalCube) * speed * Time.deltaTime;) y (new Vector3(moveHorizontalSphere, 0f, moveVerticalSphere) * speed * Time.deltaTime)
+
+<br><br>
+
+- **f) Se pide adaptar el movimiento en el ejercicio 5 para que el cubo se mueva hacia la posición de la esfera. Debes considerar, que el avance no debe estar influenciado por cuánto de lejos o cerca estén los dos objetos.**
+     
+![ejercicio_5](gifs/ejercicio_5.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Edición del anterior [script](scripts/ejercicio6_script.cs) (moveUsingKeys).
+
+Cambios dentro del script:
+1. Cálculo de la dirección hacia la esfera (directionToSphere) restando la posición de la esfera de la posición del cubo (Vector3 directionToSphere = sphere.transform.position - cube.transform.position;).
+2. Normalización de la dirección calculada (normalizedDirection) para obtener un vector de dirección unitario (Vector3 normalizedDirection = directionToSphere.normalized;).
+3. Cálculo del vector de movimiento para el cubo (movementCube) multiplicando la dirección normalizada por **speed** y por **Time.deltaTime**. (Vector3 movementCube = normalizedDirection * speed * Time.deltaTime;)
+4. Movimiento del objeto **cube** usando **cube.transform.Translate(movementCube)** para aplicar la translación según el vector de movimiento calculado.
