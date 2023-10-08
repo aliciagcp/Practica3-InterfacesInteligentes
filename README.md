@@ -147,7 +147,7 @@ Dentro del script:
 
 <br><br>
 
-- **i) Se pide configura el cilindro como un objeto físico, cuando el cubo o la esfera colisionen con él se debe mostrar un mensaje en consola con la etiqueta del objeto que haya colisionado.**
+- **i) Se pide configurar el cilindro como un objeto físico, cuando el cubo o la esfera colisionen con él se debe mostrar un mensaje en consola con la etiqueta del objeto que haya colisionado.**
      
 ![ejercicio_9](gifs/ejercicio_9.gif)
 
@@ -160,3 +160,13 @@ Dentro del script:
 2. Verificación de si el objeto con el que se ha producido la colisión tiene una etiqueta asignada usando **collision.gameObject.tag**.
 3. Si el objeto tiene una etiqueta asignada, se imprime un mensaje de depuración indicando "Colisión con objeto etiquetado: " seguido del nombre de la etiqueta del objeto con el que se ha producido la colisión: Debug.Log("Colisión con objeto etiquetado: " + collision.gameObject.tag);.
 4. Si el objeto no tiene una etiqueta asignada (si la etiqueta es null), se imprime un mensaje de depuración indicando "Colisión con objeto sin etiqueta": Debug.Log("Colisión con objeto sin etiqueta");.
+
+<br><br>
+
+- **j) Se pide configurar el cubo como un objeto cinemático y la esfera como un objeto físico. Adaptar los scripts del ejercicio 9 para obtener el mismo comportamiento.**
+     
+![ejercicio_10](gifs/ejercicio_10.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Agregación del componente **Rigidbody** en el objeto cube y marcada la opción "Is Kinematic".
+2. Agregación del componente **Rigidbody** en el objeto sphere.
