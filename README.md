@@ -8,7 +8,7 @@ Se han realizado varios ejercicios de movimiento en unity:
 ![ejercicio_1](gifs/ejercicio_1.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio3_1).
+1. Creación de un [script](scripts/ejercicio1_script.cs) asociado al cubo (Ejercicio1_3).
    
 Dentro del script:
 1. Declaración de una variable pública (speed) de tipo float con un valor inicial de 2f para determinar la velocidad del movimiento.
@@ -129,3 +129,18 @@ Cambios dentro del script:
 3. Cálculo del vector de movimiento (movement) para el cubo multiplicando el vector de avance (cube.transform.forward) por **speed** y por **Time.deltaTime**. (Vector3 movement = cube.transform.forward * speed * Time.deltaTime;).
 4. Movimiento del objeto cube en la dirección hacia la esfera utilizando **cube.transform.Translate(movement, Space.World);**, donde **Space.World** indica que el movimiento se realiza en el espacio mundial, independientemente de la rotación del objeto.
 
+<br><br>
+
+- **h) Se pide utilizar el eje “Horizontal” para girar el objetivo y que avance siempre en la dirección hacia adelante.**
+     
+![ejercicio_8](gifs/ejercicio_8.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Creación de un [script](scripts/ejercicio8_script.cs) asociado al cubo (Ejercicio7_3).
+
+Dentro del script:
+1. Declaración de una variable pública (speed) de tipo float con un valor inicial de 5f para determinar la velocidad del movimiento.
+2. Obtención de la entrada horizontal (horizontalInput) del usuario usando **Input.GetAxis("HorizontalCube")**.
+3. Cálculo del cambio de rotación en el eje Y (rotationY) multiplicando la entrada horizontal por **Time.deltaTime** y por un factor de **100f** para suavizar el movimiento. (float rotationY = horizontalInput * Time.deltaTime * 100f;).
+4. Rotación del objeto en el eje Y usando **transform.Rotate(0f, rotationY, 0f);** para aplicar el cambio de rotación calculado.
+5. Movimiento del objeto hacia adelante (transform.forward) multiplicado por **speed** y por **Time.deltaTime** para calcular el desplazamiento en el marco de tiempo actual (transform.position += transform.forward * speed * Time.deltaTime;). Este desplazamiento se suma a la posición actual del objeto, moviéndolo hacia adelante en la dirección en la que está orientado.
