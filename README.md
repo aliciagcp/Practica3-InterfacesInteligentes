@@ -168,5 +168,21 @@ Dentro del script:
 ![ejercicio_10](gifs/ejercicio_10.gif)
 
 Para ello se han seguido los siguientes pasos:
-1. Agregación del componente **Rigidbody** en el objeto cube y marcada la opción "Is Kinematic".
-2. Agregación del componente **Rigidbody** en el objeto sphere.
+1. Agregación del componente **Rigidbody** en el objeto **cube** y marcada la opción "Is Kinematic".
+2. Agregación del componente **Rigidbody** en el objeto **sphere**.
+
+<br><br>
+
+- **k) Se pide configurar el cilindro como un objeto de tipo Trigger. Adapta los scripts de los ejercicios anteriores para obtener el mismo comportamiento.**
+     
+![ejercicio_11](gifs/ejercicio_11.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Cambio del tipo de **Collider** a **Trigger** en el inspector del objecto **cylinder**. (Inspector > Capsule Collider > Is Trigger)
+2. Edición del anterior [script](scripts/ejercicio11_script.cs) (Ejercicio9_3)
+
+Cambios dentro del script:
+1. Uso del método **OnTriggerEnter(Collision collision)**, en lugar de **OnCollisionEnter(Collision collision)**.
+2. Ajuste de los mensajes que se muestran en pantalla.
+
+   
