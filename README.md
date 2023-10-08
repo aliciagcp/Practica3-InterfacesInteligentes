@@ -113,3 +113,16 @@ Cambios dentro del script:
 2. Normalización de la dirección calculada (normalizedDirection) para obtener un vector de dirección unitario (Vector3 normalizedDirection = directionToSphere.normalized;).
 3. Cálculo del vector de movimiento para el cubo (movementCube) multiplicando la dirección normalizada por **speed** y por **Time.deltaTime**. (Vector3 movementCube = normalizedDirection * speed * Time.deltaTime;)
 4. Movimiento del objeto **cube** usando **cube.transform.Translate(movementCube)** para aplicar la translación según el vector de movimiento calculado.
+
+<br><br>
+
+- **g) Se pide adaptar el movimiento en el ejercicio 6 de forma que el cubo gire hacia la esfera. Realizar pruebas cambiando la posición de la esfera mediante las teclas awsd.**
+     
+![ejercicio_7](gifs/ejercicio_7.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Edición del anterior [script](scripts/ejercicio7_script.cs) (moveUsingKeys).
+
+Cambios dentro del script:
+1. Multiplicación del vector de movimiento por **Time.deltaTime**. (new Vector3(moveHorizontalCube, 0f, moveVerticalCube) * speed * Time.deltaTime;) y (new Vector3(moveHorizontalSphere, 0f, moveVerticalSphere) * speed * Time.deltaTime)
+
