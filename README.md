@@ -74,7 +74,7 @@ Para ello se han seguido los siguientes pasos:
 3. Creación y configuración de los botones "VerticalCube" y "HorizontalCube".
 4. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("up", "down", "left" y "right") según corresponda.
 5. Creación y configuración de los botones "VerticalSphere" y "HorizontalSphere".
-6. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("w", "s", "a" y "w") según corresponda.
+6. Cambio del ajuste "Positive Button" y "Negative Button" a las teclas ("w", "s", "a" y "d") según corresponda.
 7. Asignación de los objetos "Cube" y "Sphere" en el inspector del objeto que contiene dicho script.
 
 Dentro del script:
