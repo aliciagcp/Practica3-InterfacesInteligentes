@@ -10,6 +10,12 @@ public class moveUsingKeys : MonoBehaviour
 
     void Update()
     {
+        // Move the cube using arrow keys (vertical and horizontal axes)
+        float moveVerticalCube = Input.GetAxis("VerticalCube");
+        float moveHorizontalCube = Input.GetAxis("HorizontalCube");
+        Vector3 movementCube = new Vector3(moveHorizontalCube, moveVerticalCube, 0f) * speed;
+        cube.transform.Translate(movementCube);
+        
         Vector3 directionToSphere = sphere.transform.position - cube.transform.position;
         Vector3 normalizedDirection = directionToSphere.normalized;
         Vector3 movementCube = normalizedDirection * speed * Time.deltaTime;
