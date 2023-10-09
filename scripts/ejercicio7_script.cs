@@ -10,6 +10,11 @@ public class moveUsingKeys : MonoBehaviour
 
     void Update()
     {
+        float moveVerticalCube = Input.GetAxis("VerticalCube");
+        float moveHorizontalCube = Input.GetAxis("HorizontalCube");
+        Vector3 movementCube = new Vector3(moveHorizontalCube, moveVerticalCube, 0f) * speed;
+        cube.transform.Translate(movementCube);
+        
         Vector3 directionToSphere = sphere.transform.position - cube.transform.position;
         cube.transform.LookAt(sphere.transform, Vector3.up);
         Vector3 movement = cube.transform.forward * speed * Time.deltaTime;
