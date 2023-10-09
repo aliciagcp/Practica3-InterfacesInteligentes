@@ -185,4 +185,28 @@ Cambios dentro del script:
 1. Uso del método **OnTriggerEnter(Collision collision)**, en lugar de **OnCollisionEnter(Collision collision)**.
 2. Ajuste de los mensajes que se muestran en pantalla.
 
-   
+<br><br>
+
+- **l) Se pide agregar un cilindro de un color diferente al que ya hay en la escena y configurarlo como un objeto físico. Seleccionar un conjunto de teclas que permitan controlar su movimiento por la escena y programarle un movimiento que permita dirigirlo hacia la esfera. Probar diferentes configuraciones de la esfera física con masa 10 veces mayor que el cilindro, física con masa 10 veces menor que el cilindro, cinemática y trigger. También prueba la configuración del cilindro de forma que su fricción se duplique o no. Explica en el informe todos los resultados posibles.**
+     
+![ejercicio_12](gifs/ejercicio_12.gif)
+
+Para ello se han seguido los siguientes pasos:
+1. Agregación de un nuevo objeto **cylinder** con un color distinto al resto de objetos. 
+2. Creación de un [script](scripts/ejercicio9_script.cs) asociado al nuevo cilindro. (Ejercicio12_3)
+3. Ajustes en el inspector para cada caso.
+
+Dentro del script:
+1. Declaración de una variable pública (speed) de tipo float con un valor inicial de 5f para determinar la velocidad del movimiento.
+2. Obtención de la entrada horizontal (movementHorizontal) y vertical (movementVertical) del usuario usando **Input.GetAxis("Horizontal")** y **Input.GetAxis("Vertical")** respectivamente.
+3. Creación de un vector de movimiento (movement) en el plano XZ utilizando los valores de entrada horizontal y vertical multiplicados por **speed** y por **Time.deltaTime**. (Vector3 movement = new Vector3(movementHorizontal, 0f, movementVertical) * speed * Time.deltaTime;)
+4. Movimiento del objeto al que está adjunto el script usando **transform.Translate(movement);** para aplicar el desplazamiento según el vector de movimiento calculado en el plano XZ.
+
+Resultados obtenidos:
++ **Masa 10 veces mayor que el cilindro**: La esfera es mucho más difícil de mover para el cilindro debido a su masa mayor. [gif](gifs/ejercicio12_1.cs)
++ **Masa 10 veces menor que el cilindro**: La esfera es fácilmente empujada por el cilindro debido a su masa menor.[gif](gifs/ejercicio12_2.cs)
++ **Cinemática**: La esfera no es afectada por las colisiones y no se mueve debido a las físicas. El cilindro se mueve hacia la esfera, pero la esfera permanece estática. [gif](gifs/ejercicio12_3.cs)
++ **Trigger**: La esfera actúa como un Trigger. El cilindro pasa a través de la esfera sin colisionar físicamente. [gif](gifs/ejercicio12_4.cs)
++ **Fricción duplicada**: Duplicar la fricción hace que el cilindro se desplace más lentamente en el suelo, lo que afecta su movimiento hacia la esfera. [gif](gifs/ejercicio12_5.cs)
++ **Sin duplicar la fricción**: El cilindro se desplaza más fácilmente en el suelo, lo que puede hacer que se mueva más rápidamente hacia la esfera. [gif](gifs/ejercicio12_6.cs)
+  
