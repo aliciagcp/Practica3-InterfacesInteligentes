@@ -208,5 +208,5 @@ Resultados obtenidos:
 + **Cinemática**: La esfera no es afectada por las colisiones y no se mueve debido a las físicas. El cilindro se mueve hacia la esfera, pero la esfera permanece estática. [gif](gifs/ejercicio12_3.cs)
 + **Trigger**: La esfera actúa como un Trigger. El cilindro pasa a través de la esfera sin colisionar físicamente. [gif](gifs/ejercicio12_4.cs)
 + **Fricción duplicada**: Duplicar la fricción hace que el cilindro se desplace más lentamente en el suelo, lo que afecta su movimiento hacia la esfera. [gif](gifs/ejercicio12_5.cs)
-+ **Sin duplicar la fricción**: El cilindro se desplaza más fácilmente en el suelo, lo que puede hacer que se mueva más rápidamente hacia la esfera. [gif](gifs/ejercicio12_6.cs)
++ **Sin duplicar la fricción**: El cilindro se desplaza más fácilmente en el suelo, lo que puede hacer que se mueva más rápidamente hacia la esfera. [gif](gifs/ejercicio12.cs)
   
