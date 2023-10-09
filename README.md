@@ -182,7 +182,7 @@ Para ello se han seguido los siguientes pasos:
 2. Edición del anterior [script](scripts/ejercicio11_script.cs) (Ejercicio9_3)
 
 Cambios dentro del script:
-1. Uso del método **OnTriggerEnter(Collision collision)**, en lugar de **OnCollisionEnter(Collision collision)**.
+1. Uso del método **OnTriggerEnter(Collider other)**, en lugar de **OnCollisionEnter(Collision collision)**.
 2. Ajuste de los mensajes que se muestran en pantalla.
 
 <br><br>
