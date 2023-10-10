@@ -193,7 +193,7 @@ Cambios dentro del script:
 
 Para ello se han seguido los siguientes pasos:
 1. Agregación de un nuevo objeto **cylinder** con un color distinto al resto de objetos. 
-2. Creación de un [script](scripts/ejercicio9_script.cs) asociado al nuevo cilindro. (Ejercicio12_3)
+2. Creación de un [script](scripts/ejercicio12_script.cs) asociado al nuevo cilindro. (Ejercicio12_3)
 3. Ajustes en el inspector para cada caso.
 
 Dentro del script:
